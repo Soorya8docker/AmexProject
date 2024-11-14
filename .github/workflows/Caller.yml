@@ -19,7 +19,6 @@ jobs:
     secrets:
       token: ${{ secrets.GITHUB_TOKEN }}
 
-  call-workflow:
     uses: Soorya8docker/ReusableWokflow/.github/workflow/ReusableWorkflow.yml
     with:
       Branch: ${inputs.Branch}

@@ -10,11 +10,4 @@ on:
 
 jobs:
   call-workflow:
-    permissions:
-      contents: read
-      pull-requests: write
     uses: ./.github/workflows/ReusableWorkflow.yml
-    with:
-      config-path: .github/labeler.yml
-    secrets:
-      token: ${{ secrets.GITHUB_TOKEN }}

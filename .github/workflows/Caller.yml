@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  call-workflow-passing-data:
+  call-workflow-in-local-repo:
     permissions:
       contents: read
       pull-requests: write

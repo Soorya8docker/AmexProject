@@ -13,4 +13,4 @@ jobs:
     permissions:
       contents: read
       pull-requests: write
-    uses: Soorya8docker/ReusableWorkflow/.github/workflow/ReusableWorkflow.yml
+    uses: Soorya8docker/ReusableWorkflow/.github/workflow/ReusableWorkflow.yml@main

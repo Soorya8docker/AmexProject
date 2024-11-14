@@ -10,7 +10,7 @@ jobs:
     permissions:
       contents: read
       pull-requests: write
-    uses: ./.github/workflows/ReusableWorkflow.yml@main
+    uses: ./.github/workflows/ReusableWorkflow.yml
     with:
       config-path: .github/labeler.yml
     secrets:

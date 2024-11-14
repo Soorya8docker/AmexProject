@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  call-workflow-in-local-repo:
+  call-workflow:
     permissions:
       contents: read
       pull-requests: write

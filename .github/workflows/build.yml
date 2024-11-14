@@ -1,0 +1,41 @@
+name: Reusable Build Workflow
+
+on:
+  workflow_call:
+    inputs:
+      node-version:
+        description: 'Node.js version'
+        required: true
+        default: '14'
+      run-tests:
+        description: 'Run tests after build'
+        required: false
+        type: boolean
+        default: true
+    secrets:
+      NODE_AUTH_TOKEN:
+        description: 'NPM token for authentication'
+        required: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ inputs.node-version }}
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build project
+        run: npm run build
+
+      - name: Run tests
+        if: ${{ inputs.run-tests }}
+        run: npm test

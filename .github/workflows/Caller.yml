@@ -18,7 +18,3 @@ jobs:
       config-path: .github/labeler.yml
     secrets:
       token: ${{ secrets.GITHUB_TOKEN }}
-
-    uses: Soorya8docker/ReusableWokflow/.github/workflow/ReusableWorkflow.yml
-    with:
-      Branch: ${{ inputs.Branch }}

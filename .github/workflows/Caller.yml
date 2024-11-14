@@ -1,9 +1,12 @@
 name: Call a reusable workflow
 
 on:
-  pull_request:
-    branches:
-      - main
+  workflow_dispatch:
+    inputs:
+      Branch:
+        description: 'Enter Sprint branch'
+        type: string
+        required: true
 
 jobs:
   call-workflow:

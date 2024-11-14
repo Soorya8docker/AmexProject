@@ -1,4 +1,4 @@
-name: Call a other repo reusable workflow
+name: Call a other repo
 
 on:
   workflow_dispatch:
@@ -9,10 +9,8 @@ on:
         required: true
 
 jobs:
-  call-workflow-passing-data:
-    permissions:
-      contents: read
-      pull-requests: write
+  call-workflow:
+
     uses: Soorya8docker/ReusableWorkflow/.github/workflows/ReusableWorkflow.yml@main
     with:
       Branch: ${{ inputs.Branch }}

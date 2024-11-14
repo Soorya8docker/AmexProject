@@ -14,5 +14,3 @@ jobs:
       contents: read
       pull-requests: write
     uses: Soorya8docker/ReusableWorkflow/.github/workflow/ReusableWorkflow.yml
-    with:
-      Branch: ${{ inputs.Branch }}

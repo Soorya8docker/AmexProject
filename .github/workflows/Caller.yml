@@ -21,4 +21,4 @@ jobs:
 
     uses: Soorya8docker/ReusableWokflow/.github/workflow/ReusableWorkflow.yml
     with:
-      Branch: ${inputs.Branch}
+      Branch: ${{ inputs.Branch }}
